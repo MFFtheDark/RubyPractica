@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'therubyracer'  # If using Ruby
+
+gem 'less-rails-bootstrap'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
