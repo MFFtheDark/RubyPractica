@@ -4,12 +4,13 @@ class MessagesController < ApplicationController
   end
   def create
     @message = Message.new(message_params)
-
     if @message.valid?
       MessageMailer.message_me(@message).deliver_now
-      redirect_to new_message_path, notice: "Thankyou for your message."
+	  flash[:notice] = 'Mensaje Enviado'
+      redirect_to new_message_path
     else
-      render :new
+      flash[:notice] = 'Error, complete correctamente todos los campos'
+      redirect_to new_message_path
 	end
   end
 

@@ -1,5 +1,6 @@
 <h1>Mensajes</h1>
-<p>Escriba quí su mensaje</p>
+<b><p id="notice"><%= notice %></p></b>
+<p>Escriba aquí su mensaje</p>
 <p>Para volver, haga click <a href="..">aquí</a></p>
 <%= form_for @message do |f| %>
   <% if @message.errors.any? %>
